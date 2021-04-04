@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/blog/article-one", {data:[{blogPost:{date:"2021-04-04T18:21:32.818Z",title:"Article one",thumbnail:"\u002Fimg\u002Fw40-3.jpeg",body:"The EMPEROR PROTECT!"}}],fetch:{},mutations:[]});

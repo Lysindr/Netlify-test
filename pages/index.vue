@@ -23,6 +23,14 @@
           GitHub
         </a>
       </div>
+
+      <ul class="articles-list">
+        <li v-for="blog in blogPosts" :key="blog.slug">
+          <h2>{{ blog.title }}</h2>
+          <img :src="blog.thumbnail" style="width: 200px;" alt="">
+          <p><nuxt-link :to="`/blog/${blog.slug}`">Read more</nuxt-link></p>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -36,6 +44,12 @@ export default {
           src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'
         }
       ]
+    }
+  },
+  computed: {
+    // Fetching all posts data
+    blogPosts() {
+      return this.$store.state.blogPosts; 
     }
   }
 }
